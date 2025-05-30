@@ -1023,7 +1023,7 @@ margin-bottom: 1.5rem;
  .container {
       padding-bottom: 10rem;
       display: flex;
-      gap: 5px; /* espaço entre as imagens */
+      gap: 40px; /* espaço entre as imagens */
       justify-content: center; /* centraliza as imagens na tela */
       flex-wrap: wrap; /* permite quebrar linha em telas menores */
     }
@@ -1069,11 +1069,13 @@ margin-bottom: 1.5rem;
     height: auto;
 }
 .Cores4{
+    align-items: center;
+    justify-content: center;
     font-family: "Mulish";
 font-size: 25px;
     font-weight: 110;
   position: absolute;
-  right: 160px;   /* canto direito */
+  right: 140px;   /* canto direito */
   background-color: rgb(250, 249, 249);
   color: rgb(2, 2, 2);
   border: none;
