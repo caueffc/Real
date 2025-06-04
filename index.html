@@ -49,10 +49,45 @@
           <div class="nav-icon-container">
             <a href="carrinho.html"><img src="cartt.png" alt="Carrinho"></a>
             <a href="login.html" class="login-button">Login</a>
+              <span class="user-name" id="user-name"></span>
+       <button onclick="logout()" id="logout-btn" style="color: rgb(255, 255, 255); border: none;background-color: black; padding: 5px 10px; border-radius: 50rem;">Sair</button>
           </div>
       
         </div>
       </div>
+    <!-- Modal de Login/Cadastro -->
+<div id="login-modal1" class="modal1">
+  <div class="modal1-content">
+    <span class="close-btn1" onclick="closeModal1()">&times;</span>
+
+    <!-- Formulário de Login -->
+    <div id="login-form1">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Nome de usuário" />
+      <input type="password" id="login-password" placeholder="Senha" />
+      <button onclick="login1()">Entrar</button>
+      <p>Ainda não tem conta? <a href="#" onclick="toggleForm1()">Cadastre-se</a></p>
+    </div>
+
+    <!-- Formulário de Cadastro -->
+    <div id="register-form1" style="display: none;">
+      <h2>Cadastro</h2>
+      <input type="text" id="register-name" placeholder="Nome completo" required>
+    <input type="email" id="register-email" placeholder="E-mail" required>
+    <input type="text" id="register-username" placeholder="Usuário" required>
+    <input type="password" id="register-password" placeholder="Senha" required>
+      <button onclick="register1()">Cadastrar</button>
+      <p>Já tem conta? <a href="#" onclick="toggleForm1()">Fazer login</a></p>
+      <!-- Mensagem que aparece para sucesso ou erro -->
+<div id="register-message" style="display:none; margin-top:10px; color: green; font-weight: bold;"></div>
+
+<div id="register-loader" style="display:none; margin-top:10px; text-align:center;">
+  <div class="loader"></div>
+</div>
+    </div>
+  </div>
+</div>
+
       <!-- MODAL -->
       <div id="meuModal" class="modal">
         <div class="modal-conteudo">
@@ -166,6 +201,128 @@
     
 
 <script>
+ const modal1 = document.getElementById("login-modal1");
+  const loginForm1 = document.getElementById("login-form1");
+  const registerForm1 = document.getElementById("register-form1");
+  const loginButton = document.querySelector(".login-button");
+  const userNameDisplay = document.getElementById("user-name");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  loginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal1.style.display = "flex";
+  });
+
+  function closeModal1() {
+    modal1.style.display = "none";
+  }
+
+  function toggleForm1() {
+    if (loginForm1.style.display === "none") {
+      loginForm1.style.display = "block";
+      registerForm1.style.display = "none";
+    } else {
+      loginForm1.style.display = "none";
+      registerForm1.style.display = "block";
+    }
+  }
+
+  function register1() {
+    const username = document.getElementById("register-username").value;
+    const password = document.getElementById("register-password").value;
+
+    if (username && password) {
+      localStorage.setItem("user_" + username, password);
+      alert("Cadastro realizado com sucesso!");
+      toggleForm1(); // volta pro login
+    } else {
+      alert("Preencha todos os campos para se cadastrar.");
+    }
+  }
+
+  function login1() {
+    const username = document.getElementById("login-username").value;
+    const password = document.getElementById("login-password").value;
+    const savedPassword = localStorage.getItem("user_" + username);
+
+    if (savedPassword === password) {
+      localStorage.setItem("username", username);
+      updateUserState();
+      closeModal1();
+    } else {
+      alert("Usuário ou senha incorretos.");
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem("username");
+    updateUserState();
+  }
+
+  function updateUserState() {
+    const savedUser = localStorage.getItem("username");
+    if (savedUser) {
+      userNameDisplay.textContent = `Olá, ${savedUser}`;
+      loginButton.style.display = "none";
+      logoutBtn.style.display = "inline";
+    } else {
+      userNameDisplay.textContent = "";
+      loginButton.style.display = "inline";
+      logoutBtn.style.display = "none";
+    }
+  }
+function register1() {
+  const name = document.getElementById("register-name").value.trim();
+  const email = document.getElementById("register-email").value.trim();
+  const username = document.getElementById("register-username").value.trim();
+  const password = document.getElementById("register-password").value.trim();
+
+  const messageDiv = document.getElementById("register-message");
+  const loaderDiv = document.getElementById("register-loader");
+
+  if (name && email && username && password) {
+    // Mostrar loader e esconder mensagem
+    loaderDiv.style.display = "block";
+    messageDiv.style.display = "none";
+
+    // Simula um delay para "processar" o cadastro
+    setTimeout(() => {
+      const userData = { name, email, password };
+      localStorage.setItem("user_" + username, JSON.stringify(userData));
+
+      loaderDiv.style.display = "none";
+      messageDiv.style.color = "green";
+      messageDiv.textContent = "Cadastro realizado com sucesso!";
+      messageDiv.style.display = "block";
+
+      // Limpar campos
+      document.getElementById("register-name").value = "";
+      document.getElementById("register-email").value = "";
+      document.getElementById("register-username").value = "";
+      document.getElementById("register-password").value = "";
+
+      // Depois de 3 segundos, esconde a mensagem e troca pro login
+      setTimeout(() => {
+        messageDiv.style.display = "none";
+        toggleForm1(); // Voltar para login
+      }, 3000);
+    }, 2000); // tempo do "carregando" em ms
+
+  } else {
+    // Mostrar mensagem de erro sem loader
+    loaderDiv.style.display = "none";
+    messageDiv.style.color = "red";
+    messageDiv.textContent = "Preencha todos os campos para se cadastrar.";
+    messageDiv.style.display = "block";
+
+    // Esconder a mensagem de erro após 3 segundos
+    setTimeout(() => {
+      messageDiv.style.display = "none";
+    }, 3000);
+  }
+}
+  window.onload = updateUserState;
+  window.onload = updateUserState;
    const hamburger = document.getElementById('hamburger');
 const navMenu = document.querySelector('.main-nav ul');
 
@@ -371,6 +528,7 @@ products.forEach(product => {
 });
 });
 });
+
 
 </script>
       

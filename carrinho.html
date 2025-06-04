@@ -37,11 +37,13 @@
         </ul>
       </nav>
   
-      <div class="nav-icon-container">
-        <a href="carrinho.html"><img src="cartt.png" alt="Carrinho"></a>
+     <div class="nav-icon-container">
+        <a href="carrinho.html"><img src="cartt.png" alt="Carrinho" /></a>
         <a href="login.html" class="login-button">Login</a>
+        <span id="user-name"></span>
+         <button onclick="logout()" id="logout-btn" style="color: rgb(255, 255, 255); border: none;background-color: black; padding: 5px 10px; border-radius: 50rem;">Sair</button>
       </div>
-  
+
     </div>
   </div>
        <!-- MODAL -->
@@ -60,7 +62,6 @@
             Total: <span id="cart-total">0,00 R$</span>
             <button id="checkout-button">Finalizar Compra</button>
         </div>
-        <a href="index.html" class="btn-voltar">🡐</a>
     </section>
 
     <footer>
@@ -96,6 +97,33 @@
     </footer>
 
     <script>
+      // Controle do estado do usuário logado
+    const userNameDisplay = document.getElementById("user-name");
+    const loginButton = document.querySelector(".login-button");
+    const logoutBtn = document.getElementById("logout-btn");
+
+    function updateUserState() {
+      const savedUser = localStorage.getItem("username");
+      if (savedUser) {
+        userNameDisplay.textContent = `Olá, ${savedUser}`;
+        loginButton.style.display = "none";
+        logoutBtn.style.display = "inline";
+      } else {
+        userNameDisplay.textContent = "";
+        loginButton.style.display = "inline";
+        logoutBtn.style.display = "none";
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("username");
+      updateUserState();
+      // Se quiser, redirecione para a página inicial após logout:
+      // window.location.href = "index.html";
+    }
+
+    window.onload = updateUserState;
+
        const hamburger = document.getElementById('hamburger');
 const navMenu = document.querySelector('.main-nav ul');
 
@@ -174,6 +202,12 @@ function removerDoCarrinho(produtoId) {
 
     // Atualiza a exibição dos itens do carrinho
     location.reload(); // Recarrega a página para atualizar a lista
+}
+function logout() {
+  localStorage.removeItem("username");      // Remove login
+  localStorage.removeItem("carrinho");      // Limpa o carrinho
+  updateUserState();                        // Atualiza interface (se necessário)
+  location.reload();                        // Recarrega a página para refletir mudanças
 }
     </script>
 </body>

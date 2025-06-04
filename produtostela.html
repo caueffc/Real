@@ -42,13 +42,16 @@
             </ul>
           </nav>
       
-          <div class="nav-icon-container">
-            <a href="carrinho.html"><img src="cartt.png" alt="Carrinho"></a>
-            <a href="login.html" class="login-button">Login</a>
-          </div>
-      
-        </div>
+      <div class="nav-icon-container">
+        <a href="carrinho.html"><img src="cartt.png" alt="Carrinho" /></a>
+        <a href="login.html" class="login-button">Login</a>
+        <span id="user-name"></span>
+         <button onclick="logout()" id="logout-btn" style="color: rgb(255, 255, 255); border: none;background-color: black; padding: 5px 10px; border-radius: 50rem;">Sair</button>
       </div>
+
+    </div>
+  </div>
+  
     <main>
         <section id="produtos">
             <h2 class="h2-produtos">NOSSOS PRODUTOS</h2>
@@ -65,7 +68,7 @@
             <div class="product-grid">
                 <!-- Produto 1 -->
                 <div class="product" data-id="1" data-color="azul">
-                    <img src="Design sem nome (34).png" alt="Combo Fitness 1">
+                   <img class="FOTOS1" src="Design sem nome (34).png" alt="Combo Fitness 1">
                     <p class="product-name">Combo Fitness 1</p>
                     <p class="product-price">69.90 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -75,7 +78,7 @@
 
                 <!-- Produto 2 -->
                 <div class="product" data-id="2" data-color="marrom">
-                    <img src="maio/Design sem nome (13).png" alt="Combo Fitness 2">
+                    <img class="FOTOS1" src="maio/Design sem nome (13).png" alt="Combo Fitness 2">
                     <p class="product-name">Combo Fitness 2</p>
                     <p class="product-price">47.89 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -85,7 +88,7 @@
 
                 <!-- Produto 3 -->
                 <div class="product" data-id="3" data-color="rosa">
-                    <img src="maio/rosa3.png" alt="Combo Fitness 3">
+                    <img class="FOTOS1"  src="maio/rosa3.png" alt="Combo Fitness 3">
                     <p class="product-name">Combo Fitness 3</p>
                     <p class="product-price">89,90 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -95,7 +98,7 @@
 
                 <!-- Produto 4 -->
                 <div class="product" data-id="4" data-color="verde">
-                    <img src="product/verde1.png" alt="Combo Fitness 4">
+                    <img class="FOTOS1" src="product/verde1.png" alt="Combo Fitness 4">
                     <p class="product-name">Combo Fitness 4</p>
                     <p class="product-price">54,90 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -105,7 +108,7 @@
 
                 <!-- Produto 5 -->
                 <div class="product" data-id="5" data-color="vermelho">
-                    <img src="maio/vermelho.png" alt="Combo Fitness 5">
+                    <img class="FOTOS1" src="maio/vermelho.png" alt="Combo Fitness 5">
                     <p class="product-name">Combo Fitness 5</p>
                     <p class="product-price">69.98 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -115,7 +118,7 @@
 
                 <!-- Produto 6 -->
                 <div class="product" data-id="6" data-color="verde">
-                    <img src="product/verdetop1.png" alt="Combo Fitness 6">
+                    <img class="FOTOS1" src="product/verdetop1.png" alt="Combo Fitness 6">
                     <p class="product-name">Combo Fitness 6</p>
                     <p class="product-price">62.80 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -125,7 +128,7 @@
 
                 <!-- Produto 7 -->
                 <div class="product" data-id="7" data-color="rosa">
-                    <img src="maio/rosa e branco.png" alt="Combo Fitness 7">
+                    <img class="FOTOS1" src="maio/rosa e branco.png" alt="Combo Fitness 7">
                     <p class="product-name">Combo Fitness 7</p>
                     <p class="product-price">73,90 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -135,7 +138,7 @@
 
                 <!-- Produto 8 -->
                 <div class="product" data-id="8" data-color="rosa">
-                    <img src="product/Design sem nome (34).png" alt="Combo Fitness 8">
+                    <img class="FOTOS1"src="product/Design sem nome (34).png" alt="Combo Fitness 8">
                     <p class="product-name">Combo Fitness 8</p>
                     <p class="product-price">55,90 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -145,7 +148,7 @@
 
                 <!-- Produto 9 -->
                 <div class="product" data-id="9" data-color="azul">
-                    <img src="maio/Design sem nome (8).png" alt="Combo Fitness 9">
+                   <img class="FOTOS1" src="maio/Design sem nome (8).png" alt="Combo Fitness 9">
                     <p class="product-name">Combo Fitness 9</p>
                     <p class="product-price">63,90 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -155,7 +158,7 @@
 
                 <!-- Produto 10 -->
                 <div class="product" data-id="10" data-color="marrom">
-                    <img src="roupas/Design_sem_nome_10.png" alt="Combo Fitness 10">
+                   <img class="FOTOS1" src="roupas/Design_sem_nome_10.png" alt="Combo Fitness 10">
                     <p class="product-name">Combo Fitness 10</p>
                     <p class="product-price">68,90 R$</p>
                     <p class="tamanho-rp">Disponível tamanho P M G</p>
@@ -199,6 +202,125 @@
     </footer>
     
 
-    <script src="scipt.js"></script>
+    <script>
+    // Script para filtro de cores de produtos
+const filterButtons = document.querySelectorAll('.filter-button');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const color = button.getAttribute('data-color');
+        const products = document.querySelectorAll('.product');
+
+        products.forEach(product => {
+            if (color === 'todos' || product.getAttribute('data-color') === color) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+});
+    
+    // Controle do estado do usuário logado
+    const userNameDisplay = document.getElementById("user-name");
+    const loginButton = document.querySelector(".login-button");
+    const logoutBtn = document.getElementById("logout-btn");
+
+    function updateUserState() {
+      const savedUser = localStorage.getItem("username");
+      if (savedUser) {
+        userNameDisplay.textContent = `Olá, ${savedUser}`;
+        loginButton.style.display = "none";
+        logoutBtn.style.display = "inline";
+      } else {
+        userNameDisplay.textContent = "";
+        loginButton.style.display = "inline";
+        logoutBtn.style.display = "none";
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem("username");
+      updateUserState();
+      // Se quiser, redirecione para a página inicial após logout:
+      // window.location.href = "index.html";
+    }
+
+    window.onload = updateUserState;
+
+    // Menu hamburguer mobile
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector(".main-nav ul");
+
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      hamburger.classList.toggle("active");
+    });
+
+    // Modal para os textos do menu
+    const itensMenu = document.querySelectorAll(".main-nav li");
+    const modal = document.getElementById("meuModal");
+    const fechar = document.querySelector(".fechar");
+    const mensagem = document.getElementById("mensagemModal");
+
+    const textos = {
+      produtos: "Confira nossos produtos incríveis para elevar seu treino!",
+      contato: "Entre em contato conosco pelo Instagram ou WhatsApp /  @use.shefit - (24)99999-9999",
+      sobre:
+        "A SheFit é muito mais do que uma marca de roupas fitness. Somos um movimento que acredita no poder, na força e na beleza de cada mulher. Criamos peças que unem conforto, estilo e funcionalidade para que você se sinta confiante e empoderada a cada treino."
+    };
+
+    itensMenu.forEach((item) => {
+      item.addEventListener("click", () => {
+        const conteudo = textos[item.dataset.content];
+        mensagem.textContent = conteudo;
+        modal.style.display = "block";
+      });
+    });
+
+    fechar.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    // Função para carregar itens do carrinho (exemplo básico)
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartTotalElement = document.getElementById("cart-total");
+    const checkoutButton = document.getElementById("checkout-button");
+
+    function carregarCarrinho() {
+      let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+      cartItemsContainer.innerHTML = "";
+      let total = 0;
+
+      carrinho.forEach((item) => {
+        const itemDiv = document.createElement("div");
+        itemDiv.classList.add("cart-item");
+        itemDiv.innerHTML = `
+          <p>${item.nome} - ${item.preco} R$</p>
+          <p>Quantidade: ${item.quantidade}</p>
+        `;
+        cartItemsContainer.appendChild(itemDiv);
+        total += item.preco * item.quantidade;
+      });
+
+      cartTotalElement.textContent = total.toFixed(2) + " R$";
+    }
+
+    checkoutButton.addEventListener("click", () => {
+      alert("Compra finalizada com sucesso!");
+      localStorage.removeItem("carrinho");
+      carregarCarrinho();
+    });
+
+    window.onload = () => {
+      updateUserState();
+      carregarCarrinho();
+    };</script>
 </body>
 </html>

@@ -212,7 +212,59 @@ products.forEach(product => {
 });
 });
 });
+// Salvar novo usuário
+function cadastrar(e) {
+  e.preventDefault();
+  const usuario = document.getElementById('cad-usuario').value;
+  const senha = document.getElementById('cad-senha').value;
 
+  const usuarios = JSON.parse(localStorage.getItem('usuarios')) || {};
+  if (usuarios[usuario]) {
+    alert('Usuário já existe!');
+    return;
+  }
+
+  usuarios[usuario] = senha;
+  localStorage.setItem('usuarios', JSON.stringify(usuarios));
+  alert('Cadastro realizado com sucesso!');
+  window.location.href = 'login.html';
+}
+
+// Fazer login
+function login(e) {
+  e.preventDefault();
+  const usuario = document.getElementById('login-usuario').value;
+  const senha = document.getElementById('login-senha').value;
+
+  const usuarios = JSON.parse(localStorage.getItem('usuarios')) || {};
+  if (usuarios[usuario] === senha) {
+    localStorage.setItem('usuarioLogado', usuario);
+    alert('Login feito com sucesso!');
+    window.location.href = 'index.html';
+  } else {
+    alert('Usuário ou senha inválidos');
+  }
+}
+
+// Mostrar nome do usuário logado
+window.onload = function () {
+  const user = localStorage.getItem('usuarioLogado');
+  const userNameSpan = document.getElementById('user-name');
+  const loginLink = document.getElementById('login-link');
+  const logoutBtn = document.getElementById('logout-btn');
+
+  if (user && userNameSpan) {
+    userNameSpan.textContent = `Olá, ${user}`;
+    loginLink.style.display = 'none';
+    logoutBtn.style.display = 'inline';
+  }
+};
+
+// Logout
+function logout() {
+  localStorage.removeItem('usuarioLogado');
+  window.location.reload();
+}
 
 
 
