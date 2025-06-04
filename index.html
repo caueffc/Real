@@ -72,8 +72,6 @@
     <!-- Formulário de Cadastro -->
     <div id="register-form1" style="display: none;">
       <h2>Cadastro</h2>
-      <input type="text" id="register-name" placeholder="Nome completo" required>
-    <input type="email" id="register-email" placeholder="E-mail" required>
     <input type="text" id="register-username" placeholder="Usuário" required>
     <input type="password" id="register-password" placeholder="Senha" required>
       <button onclick="register1()">Cadastrar</button>
@@ -201,7 +199,7 @@
     
 
 <script>
- const modal1 = document.getElementById("login-modal1");
+   const modal1 = document.getElementById("login-modal1");
   const loginForm1 = document.getElementById("login-form1");
   const registerForm1 = document.getElementById("register-form1");
   const loginButton = document.querySelector(".login-button");
@@ -271,56 +269,8 @@
       logoutBtn.style.display = "none";
     }
   }
-function register1() {
-  const name = document.getElementById("register-name").value.trim();
-  const email = document.getElementById("register-email").value.trim();
-  const username = document.getElementById("register-username").value.trim();
-  const password = document.getElementById("register-password").value.trim();
 
-  const messageDiv = document.getElementById("register-message");
-  const loaderDiv = document.getElementById("register-loader");
-
-  if (name && email && username && password) {
-    // Mostrar loader e esconder mensagem
-    loaderDiv.style.display = "block";
-    messageDiv.style.display = "none";
-
-    // Simula um delay para "processar" o cadastro
-    setTimeout(() => {
-      const userData = { name, email, password };
-      localStorage.setItem("user_" + username, JSON.stringify(userData));
-
-      loaderDiv.style.display = "none";
-      messageDiv.style.color = "green";
-      messageDiv.textContent = "Cadastro realizado com sucesso!";
-      messageDiv.style.display = "block";
-
-      // Limpar campos
-      document.getElementById("register-name").value = "";
-      document.getElementById("register-email").value = "";
-      document.getElementById("register-username").value = "";
-      document.getElementById("register-password").value = "";
-
-      // Depois de 3 segundos, esconde a mensagem e troca pro login
-      setTimeout(() => {
-        messageDiv.style.display = "none";
-        toggleForm1(); // Voltar para login
-      }, 3000);
-    }, 2000); // tempo do "carregando" em ms
-
-  } else {
-    // Mostrar mensagem de erro sem loader
-    loaderDiv.style.display = "none";
-    messageDiv.style.color = "red";
-    messageDiv.textContent = "Preencha todos os campos para se cadastrar.";
-    messageDiv.style.display = "block";
-
-    // Esconder a mensagem de erro após 3 segundos
-    setTimeout(() => {
-      messageDiv.style.display = "none";
-    }, 3000);
-  }
-}
+  window.onload = updateUserState;
   window.onload = updateUserState;
   window.onload = updateUserState;
    const hamburger = document.getElementById('hamburger');
