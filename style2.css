@@ -108,7 +108,7 @@ body {
   display: none;
 font-size: 28px;
 cursor: pointer;
-color: white;
+color: rgb(0, 0, 0);
 background: none;
 border: none;
 transition: transform 0.3s ease, color 0.3s ease;
@@ -135,7 +135,7 @@ transition: transform 0.3s ease, color 0.3s ease;
     top: 20%;
     font-size: 28px;
     cursor: pointer;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     z-index: 11;
     margin: 0;
 
@@ -162,6 +162,9 @@ transition: transform 0.3s ease, color 0.3s ease;
     align-items: center;
     gap: 10px;
     z-index: 1001;
+  }
+  .user-name{
+    display: none;
   }
   
   .nav-icon-container img{
