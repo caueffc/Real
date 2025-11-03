@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "nome": "Combo Fitness 1",
+    "preco": 69.90,
+    "imagem": "img/Design sem nome (34).png",
+    "descricao": "Disponível nos tamanhos P, M e G. Confortável e estiloso."
+  },
+  {
+    "id": 2,
+    "nome": "Combo Fitness 2",
+    "preco": 47.89,
+    "imagem": "img/Design sem nome (13).png",
+    "descricao": "Disponível nos tamanhos P, M e G. Ideal para treinos leves."
+  },
+  {
+    "id": 3,
+    "nome": "Combo Fitness 3",
+    "preco": 89.90,
+    "imagem": "img/rosa3.png",
+    "descricao": "Disponível nos tamanhos P, M e G. Design moderno e confortável."
+  },
+  {
+    "id": 4,
+    "nome": "Combo Fitness 4",
+    "preco": 54.90,
+    "imagem": "img/verde1.png",
+    "descricao": "Disponível nos tamanhos P, M e G. Perfeito para treinos diários."
+  },
+  {
+    "id": 5,
+    "nome": "Combo Fitness 5",
+    "preco": 69.98,
+    "imagem": "img/vermelho.png",
+    "descricao": "Disponível nos tamanhos P, M e G. Estilo e conforto para sua rotina."
+  },
+  {
+    "id": 6,
+    "nome": "Combo Fitness 6",
+    "preco": 62.80,
+    "imagem": "img/verdetop1.png",
+    "descricao": "Disponível nos tamanhos P, M e G. Ideal para atividades intensas."
+  },
+  {
+    "id": 7,
+    "nome": "Combo Fitness 7",
+    "preco": 73.90,
+    "imagem": "img/rosa e branco.png",
+    "descricao": "Disponível nos tamanhos P, M e G. Combinação de cores elegante."
+  },
+  {
+    "id": 8,
+    "nome": "Combo Fitness 8",
+    "preco": 55.90,
+    "imagem": "img/Design sem nome (34).png",
+    "descricao": "Disponível nos tamanhos P, M e G. Perfeito para treinos leves."
+  },
+  {
+    "id": 9,
+    "nome": "Combo Fitness 9",
+    "preco": 63.90,
+    "imagem": "img/Design sem nome (8).png",
+    "descricao": "Disponível nos tamanhos P, M e G. Conforto e flexibilidade."
+  },
+  {
+    "id": 10,
+    "nome": "Combo Fitness 10",
+    "preco": 68.90,
+    "imagem": "img/Design_sem_nome_10.png",
+    "descricao": "Disponível nos tamanhos P, M e G. Tecido de alta qualidade."
+  },
+   {
+    "id": 11,
+    "nome": "Combo Fitness 11",
+    "preco": 68.90,
+    "material": "Estinelo",
+    "imagem": "../img/foto1.jpg",
+    "descricao": "Disponível nos tamanhos P, M e G. Tecido de alta qualidade."
+    
+  },
+   {
+    "id": 12,
+    "nome": "Combo Fitness 12",
+    "preco": 68.90,
+    "imagem": "../img/foto2.jpg",
+    "descricao": "Disponível nos tamanhos P, M e G. Tecido de alta qualidade."
+  },
+   {
+    "id": 13,
+    "nome": "Combo Fitness 13",
+    "preco": 68.90,
+    "imagem": "../img/foto3.jpeg",
+    "descricao": "Disponível nos tamanhos P, M e G. Tecido de alta qualidade."
+  },
+   {
+    "id": 14,
+    "nome": "Combo Fitness 14",
+    "preco": 68.90,
+    "imagem": "../img/foto4.jpg",
+    "descricao": "Disponível nos tamanhos P, M e G. Tecido de alta qualidade."
+  }
+  
+  
+]

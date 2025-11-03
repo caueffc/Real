@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | SheFit</title>
+    <link rel="stylesheet" href="/css/telaproduto.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Lilita+One&family=Anton&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,900&family=Playpen+Sans:wght@100..800&family=Bebas+Neue&family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&family=Emblema+One&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="header-inner-content">
+            <div class="hamburger" id="hamburger">☰</div>
+            <h1 class="logo">
+                <a href="index.html">
+                    <img class="logo2" src="../img/Design sem nome (3)-Photoroom.png" alt="Logo da Shefit"/>
+                </a>
+            </h1>
+            <nav class="main-nav">
+                <ul>
+                    <li data-content="produtos">Produtos</li>
+                    <li data-content="contato">Contato</li>
+                    <li data-content="sobre">Sobre</li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <a href="carrinho.html"><img src="../img/cartt.png" alt="Carrinho" /></a>
+                <a href="login.html" class="login-button" id="login-button">Login</a>
+                <span class="user-name" id="user-name"></span>
+                <button id="logout-btn" style="color:#fff; border:none; background-color:black; padding:5px 10px; border-radius:50rem;">Sair</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <main>
+        <section id="produtos">
+            <h2 class="h2-produtos">NOSSOS PRODUTOS</h2>
+
+            <!-- Filtro -->
+            <div class="filter">
+                <div class="filter-item"><button class="filter-button" data-color="todos"></button><h1 class="color-name">Todos</h1></div>
+                <div class="filter-item"><button class="filter-button" data-color="azul"></button><h1 class="color-name">Azul</h1></div>
+                <div class="filter-item"><button class="filter-button" data-color="marrom"></button><h1 class="color-name">Marrom</h1></div>
+                <div class="filter-item"><button class="filter-button" data-color="rosa"></button><h1 class="color-name">Rosa</h1></div>
+                <div class="filter-item"><button class="filter-button" data-color="verde"></button><h1 class="color-name">Verde</h1></div>
+                <div class="filter-item"><button class="filter-button" data-color="vermelho"></button><h1 class="color-name">Vermelho</h1></div>
+            </div>
+
+            <!-- Grid de Produtos -->
+            <div class="product-grid" id="product-grid">
+                <!-- Cada produto terá data-id para passar para produto.html -->
+                <div class="product" data-id="1" data-color="azul">
+                    <img class="FOTOS1" src="../img/Design sem nome (34).png" alt="Combo Fitness 1">
+                    <p class="product-name">Combo Fitness 1</p>
+                    <p class="product-price">69,90 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="1">Comprar</button>
+                </div>
+
+                <div class="product" data-id="2" data-color="marrom">
+                    <img class="FOTOS1" src="../img/Design sem nome (13).png" alt="Combo Fitness 2">
+                    <p class="product-name">Combo Fitness 2</p>
+                    <p class="product-price">47,89 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="2">Comprar</button>
+                </div>
+
+                <div class="product" data-id="3" data-color="rosa">
+                    <img class="FOTOS1" src="../img/rosa3.png" alt="Combo Fitness 3">
+                    <p class="product-name">Combo Fitness 3</p>
+                    <p class="product-price">89,90 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="3">Comprar</button>
+                </div>
+
+                <div class="product" data-id="4" data-color="verde">
+                    <img class="FOTOS1" src="../img/verde1.png" alt="Combo Fitness 4">
+                    <p class="product-name">Combo Fitness 4</p>
+                    <p class="product-price">54,90 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="4">Comprar</button>
+                </div>
+
+                <div class="product" data-id="5" data-color="vermelho">
+                    <img class="FOTOS1" src="../img/vermelho.png" alt="Combo Fitness 5">
+                    <p class="product-name">Combo Fitness 5</p>
+                    <p class="product-price">69,98 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="5">Comprar</button>
+                </div>
+
+                <div class="product" data-id="6" data-color="verde">
+                    <img class="FOTOS1" src="../img/verdetop1.png" alt="Combo Fitness 6">
+                    <p class="product-name">Combo Fitness 6</p>
+                    <p class="product-price">62,80 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="6">Comprar</button>
+                </div>
+
+                <div class="product" data-id="7" data-color="rosa">
+                    <img class="FOTOS1" src="../img/rosa e branco.png" alt="Combo Fitness 7">
+                    <p class="product-name">Combo Fitness 7</p>
+                    <p class="product-price">73,90 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="7">Comprar</button>
+                </div>
+
+                <div class="product" data-id="8" data-color="rosa">
+                    <img class="FOTOS1" src="../img/Design sem nome (34).png" alt="Combo Fitness 8">
+                    <p class="product-name">Combo Fitness 8</p>
+                    <p class="product-price">55,90 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="8">Comprar</button>
+                </div>
+
+                <div class="product" data-id="9" data-color="azul">
+                    <img class="FOTOS1" src="../img/Design sem nome (8).png" alt="Combo Fitness 9">
+                    <p class="product-name">Combo Fitness 9</p>
+                    <p class="product-price">63,90 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="9">Comprar</button>
+                </div>
+
+                <div class="product" data-id="10" data-color="marrom">
+                    <img class="FOTOS1" src="../img/Design_sem_nome_10.png" alt="Combo Fitness 10">
+                    <p class="product-name">Combo Fitness 10</p>
+                    <p class="product-price">68,90 R$</p>
+                    <p class="tamanho-rp">Disponível tamanho P M G</p>
+                    <div class="estrelas">★★★★★</div>
+                    <button class="buy-button" data-id="10">Comprar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>Sobre a SheFit</h2>
+                <p>Na SheFit, oferecemos roupas fitness de alta qualidade para que você se sinta confortável e confiante durante seus treinos.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Links Rápidos</h2>
+                <ul>
+                    <li><a href="index.html#top">Voltar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contato">
+                <h2>Contato</h2>
+                <p><strong>Instagram:</strong> @use.shefit</p>
+                <p><strong>Telefone:</strong> +55 24 99989-8414</p>
+                <a href="https://wa.me/5524999898414" target="_blank">
+                    <img src="../img/10000484_processed.jpg" alt="WhatsApp" style="width:40px;height:auto;">
+                </a>
+                <a href="https://instagram.com/use.shefit/" target="_blank">
+                    <img src="../img/logotipo-da-aplicacao-instagram-em-fundo-branco_1301901-2125_processed.png" alt="Instagram" style="width:40px;height:auto;">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SheFit. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Filtro de cores
+        const filterButtons = document.querySelectorAll('.filter-button');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const color = button.getAttribute('data-color');
+                const products = document.querySelectorAll('.product');
+                products.forEach(product => {
+                    product.style.display = (color === 'todos' || product.getAttribute('data-color') === color) ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Controle de usuário
+        const userNameDisplay = document.getElementById("user-name");
+        const loginButton = document.getElementById("login-button");
+        const logoutBtn = document.getElementById("logout-btn");
+
+        function updateUserState() {
+            const savedUser = localStorage.getItem("username");
+            if(savedUser){
+                userNameDisplay.textContent = `Olá, ${savedUser}`;
+                loginButton.style.display = "none";
+                logoutBtn.style.display = "inline";
+            } else {
+                userNameDisplay.textContent = "";
+                loginButton.style.display = "inline";
+                logoutBtn.style.display = "none";
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem("username");
+            updateUserState();
+        }
+
+        // Menu hamburger
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.querySelector(".main-nav ul");
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+            hamburger.classList.toggle("active");
+        });
+
+        // Modal textos menu
+        const itensMenu = document.querySelectorAll('.main-nav li');
+        const modal = document.getElementById('meuModal');
+        const fechar = document.querySelector('.fechar');
+        const mensagem = document.getElementById('mensagemModal');
+
+        const textos = {
+            produtos: 'Confira nossos produtos incríveis para elevar seu treino!',
+            contato: 'Entre em contato conosco pelo Instagram ou WhatsApp /  @use.shefit - (24)99999-9999',
+            sobre: 'A SheFit é muito mais do que uma marca de roupas fitness. Criamos peças que unem conforto, estilo e funcionalidade.'
+        }
+
+        itensMenu.forEach(item => {
+            item.addEventListener('click', () => {
+                const tipo = item.getAttribute('data-content');
+                mensagem.textContent = textos[tipo] || 'Conteúdo não encontrado.';
+                modal.style.display = 'block';
+            });
+        });
+
+        fechar?.addEventListener('click', () => { modal.style.display = 'none'; });
+        window.addEventListener('click', (e) => { if(e.target === modal) modal.style.display='none'; });
+
+        // Botões de compra com query string
+        const buyButtons = document.querySelectorAll('.buy-button');
+        buyButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const productId = btn.getAttribute('data-id');
+                window.location.href = `produto.html?id=${productId}`;
+            });
+        });
+
+        window.onload = updateUserState;
+    </script>
+</body>
+</html>
