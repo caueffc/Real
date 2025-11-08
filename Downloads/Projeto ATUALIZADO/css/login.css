@@ -285,8 +285,8 @@
  }
 
  footer {
-   background-color: rgb(53, 51, 51);
-   color: #f1f1f1;
+   background-color: rgb(241, 236, 236);
+   color: #000000;
    padding: 50px 0;
    text-align: center;
  }
@@ -303,6 +303,7 @@
  }
 
  .footer-section h2 {
+  color: #000000;
    font-family: 'Oswald', sans-serif;
    font-size: 18px;
    margin-bottom: 15px;
@@ -312,7 +313,7 @@
  .footer-section ul,
  .footer-section a {
    font-family: 'Montserrat', sans-serif;
-   color: #f1f1f1;
+   color: #1f1f1f;
    font-size: 14px;
    line-height: 1.5;
  }
@@ -326,7 +327,7 @@
 
  .footer-section a {
    text-decoration: none;
-   color: #f1f1f1;
+   color: #1d1d1d;
    transition: color 0.3s;
  }
 

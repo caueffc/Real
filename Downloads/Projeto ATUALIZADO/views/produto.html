@@ -21,15 +21,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght=1,900&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
+   <div class="navbar">
     <div class="header-inner-content">
-      <div class="hamburger" id="hamburger">☰</div>
+
+      <!-- Ícone do menu hambúrguer (aparece só no mobile) -->
+      <div class="hamburger" id="hamburger">
+        ☰
+      </div>
       <h1 class="logo">
         <a href="index.html">
           <img class="logo2" src="../img/Design sem nome (3)-Photoroom.png" alt="Logo da Shefit" />
         </a>
       </h1>
+
+
+
       <nav class="main-nav">
         <ul>
           <li data-content="produtos">Produtos</li>
@@ -37,44 +43,130 @@
           <li data-content="sobre">Sobre</li>
         </ul>
       </nav>
+
       <div class="nav-icon-container">
-        <a href="carrinho.html"><img src="../img/cartt.png" alt="Carrinho" /></a>
+        <a href="carrinho.html"><img src="../img/cartt.png" alt="Carrinho"></a>
         <a href="login.html" class="login-button">Login</a>
         <span class="user-name" id="user-name"></span>
-        <button onclick="logout()" id="logout-btn" style="color:#fff; border:none; background-color:black; padding:5px 10px; border-radius:50rem;">Sair</button>
+
+    </div>
+  </div>
+ 
+   
+
+      <!-- Formulário de Cadastro -->
+      <div id="register-form1" style="display: none;">
+        <h2>Cadastro</h2>
+
+        <input type="text" id="register-cpf" placeholder="CPF" maxlength="14" onblur="checkCPF()">
+        <input type="text" id="register-name" placeholder="Nome completo" required>
+        <input type="text" id="register-phone" placeholder="Telefone" maxlength="15" required>
+        <input type="text" id="register-username" placeholder="E-mail" required>
+        <input type="password" id="register-password" placeholder="Senha" required>
+        <!-- Campo CEP -->
+        <input type="text" id="register-cep" placeholder="CEP" maxlength="8">
+
+        <!-- Campos que vão receber os dados -->
+        <input type="text" id="register-street" placeholder="Rua">
+        <input type="text" id="register-neighborhood" placeholder="Bairro">
+        <input type="text" id="register-city" placeholder="Cidade">
+        <input type="text" id="register-state" placeholder="Estado">
+        <div id="cep-error" style="color:red; margin-top:5px; display:none;">CEP inválido</div>
+        <!-- Loader -->
+        <div id="cep-loader" style="display:none; text-align:center; margin-top:5px;">
+          <img src="https://i.gifer.com/ZZ5H.gif" alt="Carregando..." width="30">
+        </div>
+
+        <button onclick="register1()">Cadastrar</button>
+        <p>Já tem conta? <a href="#" onclick="toggleForm1()">Fazer login</a></p>
+
+        <!-- Mensagem que aparece para sucesso ou erro -->
+        <div id="register-message" style="display:none; margin-top:10px; color: green; font-weight: bold;"></div>
+      </div>
+      <!-- Mensagem que aparece para sucesso ou erro -->
+      <div id="register-message" style="display:none; margin-top:10px; color: green; font-weight: bold;"></div>
+
+      <div id="register-loader" style="display:none; margin-top:10px; text-align:center;">
+        <div class="loader"></div>
       </div>
     </div>
   </div>
+  </div>
 
-  <!-- Modal -->
+  <!-- MODAL -->
   <div id="meuModal" class="modal">
     <div class="modal-conteudo">
       <span class="fechar">&times;</span>
       <p id="mensagemModal"></p>
     </div>
   </div>
+<div class = "card-wrapper">
+  <div class = "card">
+ <div class="produto-container">
     
-  <!-- Produto -->
-  <div class="produto-container">
-    <div class="produto-imagem">
-      <img id="produto-imagem" src="" alt="Imagem do Produto">
-    </div>
     <div class="produto-detalhes">
-      <h2 id="produto-nome"></h2>
-      <p id="produto-descricao" class="produto-descricao"></p>
-      <p id="produto-material" class="produto-material"><strong>Material:</strong>  <span id="produto-material"></span></p>
-      <p><strong>Tamanhos disponíveis:</strong> <span id="produto-tamanhos"></span></p>
-      <p><strong>Cor:</strong> <span id="produto-cor"></span></p>
-      <p id="produto-preco" class="produto-preco"></p>
-
       <div class="botoes-container">
-        <button id="botao-comprar" class="buy-button">
-          Comprar
+       
         </button>
       </div>
     </div>
   </div>
 
+<!-- Produto -->
+<div id="produto-container" class="produto-container">
+  <div class="produto-imagem">
+    <img id="produto-imagem" src="" alt="Imagem do Produto">
+  </div>
+
+  <div class="produto-detalhes">
+    <h2 id="produto-nome"></h2>
+    <p id="produto-descricao" class="produto-descricao"></p>
+
+    <ul class="produto-info">
+      <li><strong>Cor:</strong> <span id="produto-cor"></span></li>
+      <li><strong>Categoria:</strong> <span id="produto-categoria"></span></li>
+      <li><strong>Disponibilidade:</strong> <span id="produto-disponibilidade"></span></li>
+      <li><strong>Área de envio:</strong> <span id="produto-areaEnvio"></span></li>
+      <li><strong>Frete:</strong> <span id="produto-frete"></span></li>
+    </ul>
+
+    <div class="precos">
+      <p class="last-price">De: <span></span></p>
+      <p class="new-price">Por: <span></span></p>
+    </div>
+
+    <div class="avaliacao">
+      ⭐⭐⭐⭐⭐ <span id="produto-avaliacao"></span>
+    </div>
+
+    <div class="botoes-container">
+      <button id="botao-comprar" class="buy-button">Comprar</button>
+    </div>
+    <div class = "social-links">
+        <p>Compartilhar: </p>
+        <a href = "#">
+          <i class = "fab fa-facebook-f"></i>
+        </a>
+        <a href = "#">
+          <i class = "fab fa-twitter"></i>
+        </a>
+        <a href = "#">
+          <i class = "fab fa-instagram"></i>
+        </a>
+        <a href = "#">
+          <i class = "fab fa-whatsapp"></i>
+        </a>
+        <a href = "#">
+          <i class = "fab fa-pinterest"></i>
+        </a>
+      </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
   <!-- Footer -->
   <footer>
     <div class="footer-container">
@@ -95,14 +187,13 @@
         <p><strong>Email:</strong> contato@shefit.com</p>
         <p><strong>Telefone:</strong> +55 11 99999-9999</p>
         <a href="https://wa.me/5511999999999" target="_blank">
-          <img src="../img/whatsapp.png" alt="WhatsApp da SheFit" style="width: 40px; height: auto;">
+          <img src="../img/10000484_processed.jpg" alt="WhatsApp da SheFit" style="width: 40px; height: auto;">
         </a>
         <a href="https://instagram.com/use.shefit/" target="_blank">
-          <img src="../img/instagram.png" alt="Instagram da SheFit" style="width: 40px; height: auto;">
+          <img src="../img/logotipo-da-aplicacao-instagram-em-fundo-branco_1301901-2125_processed.png" alt="Instagram da SheFit" style="width: 40px; height: auto;">
         </a>                
       </div>
     </div>
-    <div class="footer-bottom">
       <p>&copy; 2024 SheFit. Todos os direitos reservados.</p>
     </div>
   </footer>
@@ -110,5 +201,6 @@
   <!-- Scripts -->
   <script src="../js/model.js"></script>
   <script src="../js/controller.js"></script>
+  <script src="../js/scriptindex.js"></script>
 </body>
 </html>

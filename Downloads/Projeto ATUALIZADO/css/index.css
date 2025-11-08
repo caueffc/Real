@@ -14,6 +14,7 @@
  }
 
  body {
+   background: linear-gradient(135deg,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 50%,rgba(209,209,209,1) 50%,rgba(254,254,254,1) 100%) center/cover no-repeat;min-height:100vh;
    font-family: 'Mulish', sans-serif;
    line-height: 1.6;
    display: flex;
@@ -222,7 +223,8 @@
  }
 
 
- .product {
+ .produto {
+   background: linear-gradient(135deg,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 50%,rgba(209,209,209,1) 50%,rgba(254,254,254,1) 100%) center/cover no-repeat;min-height:100vh;
    background-color: white;
    /* Cor de fundo do produto */
    border-radius: 10px;
@@ -829,10 +831,9 @@
    background-color: #218838;
    /* Cor de fundo mais escura no hover */
  }
-
- footer {
-   background-color: rgb(53, 51, 51);
-   color: #f1f1f1;
+footer {
+   background-color: rgb(241, 236, 236);
+   color: #000000;
    padding: 50px 0;
    text-align: center;
  }
@@ -849,6 +850,7 @@
  }
 
  .footer-section h2 {
+  color: #000000;
    font-family: 'Oswald', sans-serif;
    font-size: 18px;
    margin-bottom: 15px;
@@ -858,7 +860,7 @@
  .footer-section ul,
  .footer-section a {
    font-family: 'Montserrat', sans-serif;
-   color: #f1f1f1;
+   color: #1f1f1f;
    font-size: 14px;
    line-height: 1.5;
  }
@@ -872,7 +874,7 @@
 
  .footer-section a {
    text-decoration: none;
-   color: #f1f1f1;
+   color: #1d1d1d;
    transition: color 0.3s;
  }
 
@@ -918,6 +920,7 @@
      opacity: 0;
    }
  }
+
 
  /* Estilos para a seção de suporte */
  #suporte {
@@ -1030,7 +1033,7 @@
  }
 
  .gray-background {
-   background-color: #ffffff;
+    background: linear-gradient(135deg,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 50%,rgba(209,209,209,1) 50%,rgba(254,254,254,1) 100%) center/cover no-repeat;min-height:100vh;
    padding: 40px;
  }
 
@@ -1143,20 +1146,7 @@
  }
 
 
-/* container principal dos cards */
-.container {
-  display: flex;
-  flex-wrap: wrap; /* permite quebrar linha se faltar espaço */
-  justify-content: center; /* centraliza horizontalmente */
-  gap: 20px; /* espaçamento entre os cards */
-  padding: 20px;
-}
 
- .container img {
-   width: 340px;
-   /* ajuste o tamanho como quiser */
-   height: auto;
- }
 
  .show {
    padding-bottom: 40px;
@@ -1432,7 +1422,7 @@
  }
 
  body{background: linear-gradient(135deg,  rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 50%,rgba(209,209,209,1) 50%,rgba(254,254,254,1) 100%) center/cover no-repeat;min-height:100vh}
-.card{width:460px; height:580px; background-color:#fff;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.1);transition:.3s;font-family:'Segoe UI',sans-serif;margin:30px; flex: 0 0 auto; ;overflow:hidden;position:relative;cursor:pointer}
+.card{gap: 10rem;   width:460px; height:580px; background-color:#fff;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.1);transition:.3s;font-family:'Segoe UI',sans-serif;margin: 0px;  ;overflow:hidden;position:relative;cursor:pointer}
 .card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.15)}
 .badge{position:absolute;top:10px;right:10px;background: linear-gradient(to right,  rgba(169,3,41,1) 0%,rgba(196,72,72,1) 44%,rgba(170,34,56,1) 100%);color:#fff;padding:5px 10px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border-radius:10px;box-shadow:0 3px 10px rgba(0,0,0,.2);z-index:10}
 .tilt{overflow:hidden}
@@ -1465,7 +1455,8 @@
   flex-wrap: nowrap;          /* impede que quebrem para a linha de baixo */
   justify-content: center;/* alinha os cards à esquerda */
   align-items: center;
-  overflow-x: auto;           /* adiciona rolagem horizontal */
+  overflow-x: auto;   
+  margin: 2rem;        /* adiciona rolagem horizontal */
   gap: 10px;                  /* espaço mínimo entre cards */
   padding: 10px 0;            /* pequeno espaçamento superior/inferior */
 }
