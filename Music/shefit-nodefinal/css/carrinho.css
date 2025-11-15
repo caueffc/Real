@@ -491,35 +491,44 @@ footer {
   }
  }
 
- .modal1 {
-   font-family: 'Mulish';
-   display: none;
-   position: fixed;
-   z-index: 999;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0, 0, 0, 0.6);
-   justify-content: center;
-   align-items: center;
- }
+.modal1 {
+  font-family: 'Mulish';
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  margin-top: 10rem;
+  width: 100%;
+  height: 100%;
+  
+  /* Corrigido: Garante que o modal seja um contêiner flex para centralização */
+   
+  justify-content: center;
+  align-items: center;
+}
 
- .modal1-content {
-   margin-top: 10rem;
-   margin-left: 47rem;
-   background-color: #fff;
-   padding: 30px;
-   border-radius: 40px;
-   width: 90%;
-   max-width: 400px;
-   text-align: center;
-   position: relative;
-   max-height: 80vh;
-   /* altura máxima do modal */
-   overflow-y: auto;
-   /* adiciona rolagem se o conteúdo for grande */
- }
+.modal1-content {
+ 
+  /* Corrigido: Removido margin-top e margin-left fixos que impediam a centralização */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 40px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  max-height: 80vh;
+  /* Adicionado: Garante que o conteúdo interno esteja centralizado */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Adicionado: Centraliza o bloco do modal dentro do contêiner flex (.modal1) */
+  margin: auto;
+  overflow-y: auto;
+}
+
 
  .close-btn1 {
    position: absolute;
@@ -597,3 +606,30 @@ footer {
    box-shadow: 0 0 0 3px #85c1e9;
  }
 
+ @media (max-width: 600px) {
+  .modal1-content {
+    /* Ocupa mais espaço na tela para melhor usabilidade em dispositivos móveis */
+    width: 95%;
+    max-width: none; /* Remove o limite máximo para telas pequenas */
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .modal1-content input {
+    width: 100%; /* Inputs ocupam toda a largura */
+  }
+
+  #login-modal1 button {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+}
+
+/* Para telas entre 601px e 1024px (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .modal1-content {
+    /* Um pouco maior para tablets */
+    max-width: 450px;
+    padding: 25px;
+  }
+}
